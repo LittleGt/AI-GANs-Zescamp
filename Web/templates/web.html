@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Imagine Scene</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    </head>
+<body>
+    <!--Menu-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark " style="padding: 10px;">
+        <div class="container-fluid">
+           <h1 style="color: aliceblue; font-size: 100px; ">The Imagine Scene</h1>
+        </div>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <!--ปุ่ม-->
+    <nav class="navbar navbar-expand-sm bg-white" style="padding-left: 100px;">
+        <h1 class="me-5">คลิกเพื่อสร้างรูปภาพ</h3>
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle " style="font-size: 25px;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Select
+            </button>
+            <div class="dropdown-menu">
+            <form method="post" action="/generate">
+              <a class="dropdown-item" style="font-size: 20px;" href="{{url_for('generateForestRoute')}}">ป่า/น้ำแข็ง</a>
+              <a class="dropdown-item" style="font-size: 20px;" href="{{url_for('generateMountRoute')}}">ภูเขา</a>
+              <!--<a class="dropdown-item" style="font-size: 20px;" href="{{url_for('generateForestRoute')}}">ภูเขาหิมะ</a>-->
+              <a class="dropdown-item" style="font-size: 20px;" href="{{url_for('generateWaterfallRoute')}}">น้ำตก</a>
+              <a class="dropdown-item" style="font-size: 20px;" href="{{url_for('generateDesertRoute')}}">ทะเลทราย</a>
+              <a class="dropdown-item" style="font-size: 20px;" href="{{url_for('generateMeadowRoute')}}">สวน/ทุ่งหญ้า</a>
+            </form>
+          </div>
+          
+        
+    </nav>
+    <!--สไลด์ -->
+    <section id="slider">
+         <div class="carousel slide" data-bs-ride="carousel" id="mySlider">
+             <ol class="carousel-indicators">
+                 <button data-bs-target="#mySlider" data-bs-slide-to="0" class="active"></button>
+                 <button data-bs-target="#mySlider" data-bs-slide-to="1"></button>
+                 <button data-bs-target="#mySlider" data-bs-slide-to="2"></button>
+                 <button data-bs-target="#mySlider" data-bs-slide-to="3"></button>
+                 <button data-bs-target="#mySlider" data-bs-slide-to="4"></button>
+             </ol>
+             <div class="carousel-inner">
+                 <div class="carousel-item carousel-image-1 active">
+                     <div class="container">
+                         <div class="carousel-caption d-none d-sm-block">
+                             <h1 class="display-3 ">ป่า</h1>
+                             
+                         </div>
+                     </div>
+                 </div>
+                 <div class="carousel-item carousel-image-2 ">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block">
+                            <h1 class="display-3">ภูเขาหิมะ</h1>
+                            
+                        </div>
+                    </div>
+                 </div>
+                 <div class="carousel-item carousel-image-3 ">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block">
+                            <h1 class="display-3">ภูเขา</h1>
+                           
+                        </div>
+                    </div>
+                 </div>
+                 <div class="carousel-item carousel-image-4 ">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block">
+                            <h1 class="display-3">น้ำตก</h1>
+                           
+                        </div>
+                    </div>
+                 </div>
+                
+                 <div class="carousel-item carousel-image-5 ">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block">
+                            <h1 class="display-3">ทะเลทราย</h1>
+                           
+                        </div>
+                    </div>
+                 </div>
+                 <button class="carousel-control-prev" data-bs-target="#mySlider" data-bs-slide="prev">
+                     <span class="carousel-control-prev-icon"></span>
+                 </button>
+                 <button class="carousel-control-next" data-bs-target="#mySlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+             </div>
+         </div>
+    </section>
+    <!--ข้อมุลที่เกี่นวข้อง-->
+    <section id="about" class="p-5">
+        <div class="dark-overlay">
+            <div class="row">
+                <div class="col">
+                    <div class="container pt-5">
+                        <h1>เกี่ยวกับ เว็ป</h1>
+                        <p style="font-size: 25px;">เกี่ยวกับการสร้างภาพสถานที่ในจินตนาการต่างๆ ตามตัวเลือกที่เราได้จัดเตรียมไว้ ตัวอย่างเช่น ป่า ภูเขา ภูเขาหิมะ เป็นต้น</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--ตัวอย่าง-->
+    <section id="gallary" class="p-5">
+        <div class="container">
+            <h1 class="text-center">รูปตัวอย่าง</h1>
+            <br>
+            <!-- Image -->
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <img src="{{url_for('static', filename = '/pic/new/01.png')}}" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="{{url_for('static', filename = '/pic/new/02.png')}}" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="{{url_for('static', filename = '/pic/new/03.png')}}" class="img-fluid">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <img src="{{url_for('static', filename = '/pic/new/04.png')}}" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="{{url_for('static', filename = '/pic/new/05.png')}}" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="{{url_for('static', filename = '/pic/new/06.png')}}" class="img-fluid">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <img src="{{url_for('static', filename = '/pic/new/07.png')}}" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="{{url_for('static', filename = '/pic/new/08.png')}}" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="{{url_for('static', filename = '/pic/new/09.png')}}"class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div>
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>  
+    </div>
+</body>
+<footer>
+    จัดทำโดย กลุ่ม 11 ค่าย Zes ครั้งที่ 13
+    <div class="container-fluid " style="padding: 10px;">
+        <a class="btn" style="margin: 10px; font-size: 20px;" href="{{url_for('CreditsRoute')}}">Credits</a>
+    </div>
+</footer>
+</html>

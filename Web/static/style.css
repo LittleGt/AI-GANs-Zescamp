@@ -1,0 +1,58 @@
+*{
+    font-family: 'Itim', cursive;
+}
+.carousel-item{
+    height: 500px;
+}
+
+.carousel-image-1{
+    
+    background-image: url('pic/forest.jpg');
+    background-size: cover;
+}
+
+.carousel-image-2{
+    background-image: url('pic/snowmount_2.jpg');
+    background-size: cover;
+    
+}
+
+.carousel-image-3{
+    background-image: url('pic/mountains.jpg');
+    background-size: cover;
+}
+
+.carousel-image-4{
+    background-image: url('pic/cascade-1866599_1280.jpg');
+    background-size: cover;
+}
+
+.carousel-image-5{
+    background-image: url('pic/desert-768423_1280.jpg');
+    background-size: cover;
+}
+
+#about{
+    min-height: 200px;
+    position: relative;
+    background-image: url("iceland-5586225_1280.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color:#fff;
+    background-attachment: fixed;
+}
+.dark-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+}
+footer{
+    background-color: bisque;
+    font-size: 30px;
+    height: 50px;
+    text-align: center;
+}
